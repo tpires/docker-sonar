@@ -1,5 +1,4 @@
 # docker-sonar
-============
 
 SonarQube is an open platform to manage code quality.
 
@@ -9,11 +8,14 @@ The SonarQube platform is made of 3 components:
 2. One Web Server for users to browse quality snapshots and configure the SonarQube instance
 3. One or more Analyzers to analyze projects.
 
-On this repo you'll find to images that provide the first 2 components: 
+### Description
+
+On this repo you'll find 2 images that provide the first 2 components: 
+
 	* Database (sonar-mysql)
 	* WebServer (sonar-server).
 
-## Setup
+### Setup
 
 1. First you need to run the database image, but you need to give it a name so it can be later linked with the sonar-server:
 
