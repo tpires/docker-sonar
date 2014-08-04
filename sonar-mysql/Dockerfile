@@ -1,11 +1,10 @@
-from ubuntu:12.04
+from ubuntu:14.04
 maintainer Tiago Pires, tandrepires@gmail.com
 
 # Because docker replaces /sbin/init: https://github.com/dotcloud/docker/issues/1024 
 RUN dpkg-divert --local --rename --add /sbin/initctl
-RUN ln -s /bin/true /sbin/initctl
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update && apt-get upgrade -y
 
 ADD create_database.sql /tmp/create_database.sql
