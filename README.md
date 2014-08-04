@@ -21,6 +21,10 @@ On this repo you'll find 2 images that provide the first 2 components:
 
 	`docker run -i -t -d -p 3306:3306 -name smysql tpires/sonar-mysql`
 
+	### Default user and password
+
+	Default user and password for mysql is sonar:123qwe.
+
 2. Now you need to run the server and link it with the database. That link will be named "db".
 
 	`docker run -i -t -d -p 9000:9000 -link smysql:db tpires/sonar-server`
