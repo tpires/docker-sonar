@@ -1,4 +1,4 @@
-from dockerfile/java
+from java:latest
 maintainer Tiago Pires, tandrepires@gmail.com
 
 # RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
