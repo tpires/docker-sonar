@@ -1,0 +1,12 @@
+db:
+  build: ./sonar-mysql
+  ports:
+    - "3306:3306"
+
+web:
+  ports:
+    - "9000:9000"
+  build: ./sonar-server
+  links:
+    - db:db
+    
